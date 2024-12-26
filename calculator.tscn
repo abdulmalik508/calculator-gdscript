@@ -1,0 +1,165 @@
+[gd_scene load_steps=4 format=3 uid="uid://gq3onj5405ll"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_6gqki"]
+[ext_resource type="Theme" uid="uid://c2kvgrbbxoveb" path="res://new_theme.tres" id="1_o6cgu"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ycpgp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_6gqki")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 373.0
+offset_bottom = 667.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_o6cgu")
+
+[node name="Row1" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Result" type="Label" parent="CanvasLayer/VBoxContainer/Row1/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxLine_ycpgp")
+autowrap_mode = 3
+
+[node name="Row2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Number1" type="Button" parent="CanvasLayer/VBoxContainer/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+icon_alignment = 1
+
+[node name="Number2" type="Button" parent="CanvasLayer/VBoxContainer/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "2"
+
+[node name="Number3" type="Button" parent="CanvasLayer/VBoxContainer/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "3"
+
+[node name="Divide" type="Button" parent="CanvasLayer/VBoxContainer/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "/"
+
+[node name="Row3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Number4" type="Button" parent="CanvasLayer/VBoxContainer/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4"
+
+[node name="Number5" type="Button" parent="CanvasLayer/VBoxContainer/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5"
+
+[node name="Number6" type="Button" parent="CanvasLayer/VBoxContainer/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6"
+
+[node name="Multiply" type="Button" parent="CanvasLayer/VBoxContainer/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "*"
+
+[node name="Row4" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Number7" type="Button" parent="CanvasLayer/VBoxContainer/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7"
+
+[node name="Number8" type="Button" parent="CanvasLayer/VBoxContainer/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8"
+
+[node name="Number9" type="Button" parent="CanvasLayer/VBoxContainer/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "9"
+
+[node name="Plus" type="Button" parent="CanvasLayer/VBoxContainer/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="Row5" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Number0" type="Button" parent="CanvasLayer/VBoxContainer/Row5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+
+[node name="Decimal" type="Button" parent="CanvasLayer/VBoxContainer/Row5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "."
+
+[node name="Equals" type="Button" parent="CanvasLayer/VBoxContainer/Row5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "="
+
+[node name="Minus" type="Button" parent="CanvasLayer/VBoxContainer/Row5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="Row6" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Clear" type="Button" parent="CanvasLayer/VBoxContainer/Row6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row2/Number1" to="." method="_on_number_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row2/Number2" to="." method="_on_number_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row2/Number3" to="." method="_on_number_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row2/Divide" to="." method="_on_divide_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row3/Number4" to="." method="_on_number_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row3/Number5" to="." method="_on_number_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row3/Number6" to="." method="_on_number_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row3/Multiply" to="." method="_on_multiply_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row4/Number7" to="." method="_on_number_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row4/Number8" to="." method="_on_number_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row4/Number9" to="." method="_on_number_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row4/Plus" to="." method="_on_plus_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row5/Number0" to="." method="_on_number_0_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row5/Decimal" to="." method="_on_decimal_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row5/Equals" to="." method="_on_equals_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row5/Minus" to="." method="_on_minus_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Row6/Clear" to="." method="_on_clear_pressed"]
